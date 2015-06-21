@@ -22,4 +22,4 @@ The script reads the test and the train set and uses the features file for colum
 Activities and subjects are added to both respetive data frames before they are merged and only std() and mean() varaibles are kept.
 
 
-Activity labels are added to the set before it is writen to file.
+Activity labels are added to the set before it is written to file.
