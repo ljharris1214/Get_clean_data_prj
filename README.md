@@ -12,3 +12,14 @@ The dataset from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2F
 *CoodBook.md* the codebook for the new dataset
 
 
+### About run_analysis.R
+The script expects to find the catalog from the original data set in its working directory.
+
+
+The script reads the test and the train set and uses the features file for column names.
+
+
+Activities and subjects are added to both respetive data frames before they are merged and only std() and mean() varaibles are kept.
+
+
+Activity labels are added to the set before it is writen to fil.
