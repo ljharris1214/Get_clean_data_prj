@@ -61,5 +61,11 @@ final <- merged[ , grep("mean\\(\\)|std\\(\\)|label|subject", colnames(merged))]
 # Adding sensible name to activities/labels
 final$label <- factor(final$label, labels = as.character(activity[,2]))
 
+
+# independent tidy data set with the average of each variable for each activity and each subject.
+nds <- final %>% group_by(label, subject) %>% summarise_each(funs(mean))
+
 # Writing tidy set to file
-write.table(final, "tidy_data_set.txt", row.names = FALSE, col.names = FALSE)
+write.table(nds, "tidy_data_set.txt", row.names = FALSE)
+
+
